@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <div>
+        <h2>SHOP</h2>
+      </div>
+
+      <div>
+        <input
+          type="text"
+          name="search"
+          placeholder="Search..."
+          class="search-box"
+        />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+
+      <div class="logall">
+        <button onclick="checkLogout()" class="logout">Log Out</button>
+        <button class="login"><a href="./html/login.html">Login</a></button>
+        <button class="register">
+          <a href="./html/register.html">Register</a>
+        </button>
+      </div>
+
+      <div>
+        <span>
+          <a href="./html/cart.html">
+            <i class="fa-solid fa-cart-shopping main"></i
+          ></a>
+        </span>
+        <span id="totalCountProduct" class="total-products"></span>
+      </div>
+    </div>
+
+    <div class="container" id="listproducts">
+      <!-- <div class="card">
+        <div class="card-img">
+          <img
+            src="./image/Versace Eros.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="card-title">
+          <h3>Versace Eros</h3>
+          <p>Eau de Parfum</p>
+        </div>
+
+        <div class="card-details">
+          <div class="price">
+            <span>Price</span>
+            <p>2500000</p>
+          </div>
+
+          <div class="volume">
+            <span>Item Volume</span>
+            <p>100ml</p>
+          </div>
+        </div>
+
+        <button>Add To Cart</button>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img
+            src="./image/Dior Sauvage.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="card-title">
+          <h3>Dior Sauvage</h3>
+          <p>Eau de Parfum</p>
+        </div>
+
+        <div class="card-details">
+          <div class="price">
+            <span>Price</span>
+            <p>2750000</p>
+          </div>
+
+          <div class="volume">
+            <span>Item Volume</span>
+            <p>100ml</p>
+          </div>
+        </div>
+
+        <button>Add To Cart</button>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img
+            src="./image/Juicy Couture.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="card-title">
+          <h3>Juicy Couture</h3>
+          <p>Eau de Parfum</p>
+        </div>
+
+        <div class="card-details">
+          <div class="price">
+            <span>Price</span>
+            <p>2000000</p>
+          </div>
+
+          <div class="volume">
+            <span>Item Volume</span>
+            <p>100ml</p>
+          </div>
+        </div>
+
+        <button>Add To Cart</button>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img src="./image/Chanel Coco.png.webp" alt="" />
+        </div>
+
+        <div class="card-title">
+          <h3>Chanel Coco</h3>
+          <p>Eau de Parfum</p>
+        </div>
+
+        <div class="card-details">
+          <div class="price">
+            <span>Price</span>
+            <p>3400000</p>
+          </div>
+
+          <div class="volume">
+            <span>Item Volume</span>
+            <p>100ml</p>
+          </div>
+        </div>
+
+        <button>Add To Cart</button>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img
+            src="./image/Hermès Terre D Hermès Eau Tres EDT.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="card-title">
+          <h3>Hermès Terre D Hermès Eau Tres EDT</h3>
+          <p>Eau de Parfum</p>
+        </div>
+
+        <div class="card-details">
+          <div class="price">
+            <span>Price</span>
+            <p>3050000</p>
+          </div>
+
+          <div class="volume">
+            <span>Item Volume</span>
+            <p>100ml</p>
+          </div>
+        </div>
+
+        <button>Add To Cart</button>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img
+            src="./image/Armaf Club De Nuit Intense For Man.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="card-title">
+          <h3>Armaf Club De Nuit Intense For Man</h3>
+          <p>Eau de Parfum</p>
+        </div>
+
+        <div class="card-details">
+          <div class="price">
+            <span>Price</span>
+            <p>1800000</p>
+          </div>
+
+          <div class="volume">
+            <span>Item Volume</span>
+            <p>100ml</p>
+          </div>
+        </div>
+
+        <button>Add To Cart</button>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img
+            src="./image/Armaf Club De Nuit EDP For Woman.jpeg"
+            alt=""
+          />
+        </div>
+
+        <div class="card-title">
+          <h3>Armaf Club De Nuit EDP For Woman</h3>
+          <p>Eau de Parfum</p>
+        </div>
+
+        <div class="card-details">
+          <div class="price">
+            <span>Price</span>
+            <p>2800000</p>
+          </div>
+
+          <div class="volume">
+            <span>Item Volume</span>
+            <p>100ml</p>
+          </div>
+        </div>
+
+        <button>Add To Cart</button>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img src="./image/Louis Vuitton LV L Immensite EDP.jpg" alt="" />
+        </div>
+
+        <div class="card-title">
+          <h3>Louis Vuitton LV L Immensite EDP</h3>
+          <p>Eau de Parfum</p>
+        </div>
+
+        <div class="card-details">
+          <div class="price">
+            <span>Price</span>
+            <p>8000000</p>
+          </div>
+
+          <div class="volume">
+            <span>Item Volume</span>
+            <p>100ml</p>
+          </div>
+        </div>
+
+        <button>Add To Cart</button>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img src="./image/Parfums De Marly Herod For Men EDP.jpg" alt="" />
+        </div>
+
+        <div class="card-title">
+          <h3>Parfums De Marly Herod For Men EDP<h3>
+          <p>Eau de Parfum</p>
+        </div>
+
+        <div class="card-details">
+          <div class="price">
+            <span>Price</span>
+            <p>4800000</p>
+          </div>
+
+          <div class="volume">
+            <span>Item Volume</span>
+            <p>100ml</p>
+          </div>
+        </div>
+
+        <button>Add To Cart</button>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img src="./image/Frederic Malle Geranium Pour Monsieur EDP.jpg" alt="" />
+        </div>
+
+        <div class="card-title">
+          <h3>Frederic Malle Geranium Pour Monsieur EDP </h3>
+          <p>Eau de Parfum</p>
+        </div>
+
+        <div class="card-details">
+          <div class="price">
+            <span>Price</span>
+            <p>5370000</p>
+          </div>
+
+          <div class="volume">
+            <span>Item Volume</span>
+            <p>100ml</p>
+          </div>
+        </div>
+
+        <button>Add To Cart</button>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img src="./image/Paco Rabanne Phantom EDT.jpg" alt="" />
+        </div>
+
+        <div class="card-title">
+          <h3>Paco Rabanne Phantom EDT</h3>
+          <p>Eau de Parfum</p>
+        </div>
+
+        <div class="card-details">
+          <div class="price">
+            <span>Price</span>
+            <p>3300000</p>
+          </div>
+
+          <div class="volume">
+            <span>Item Volume</span>
+            <p>100ml</p>
+          </div>
+        </div>
+
+        <button>Add To Cart</button>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img src="./image/Valentino Donna For Women.jpg" alt="" />
+        </div>
+
+        <div class="card-title">
+          <h3>Valentino Donna For Women</h3>
+          <p>Eau de Parfum</p>
+        </div>
+
+        <div class="card-details">
+          <div class="price">
+            <span>Price</span>
+            <p>3200000</p>
+          </div>
+
+          <div class="volume">
+            <span>Item Volume</span>
+            <p>100ml</p>
+          </div>
+        </div>
+
+        <button>Add To Cart</button>
+      </div> -->
+    </div>
+
+    <div class="list-page">
+      <i class="fa-solid fa-chevron-left" onclick="decreasePage()"></i>
+      <ul id="listPage">
+        <!-- <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li> -->
+      </ul>
+      <i class="fa-solid fa-chevron-right" onclick="increasePage()"></i>
+    </div>
+
+    <div id="snackbar"></div>
+    <div id="snackbar-1"></div>
+    <footer></footer>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

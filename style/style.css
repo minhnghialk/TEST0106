@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+}
+
+body {
+    height: max-content;
+    align-items: center;
+    justify-content: center; 
+    background: #e8f1ef;
+}
+
+.header {
+    background-color: #fffbf8;
+    display:flex;
+    height: 100px;
+    justify-content: space-around;
+    padding-top: 30px;
+    border-bottom: 1px solid  #7B797B;
+    position: sticky;
+    width: 100%;
+    top:0px;
+    flex-wrap: wrap;
+}
+
+.header .logall {
+    display: flex;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.container .cart {
+    width: 30%;
+}
+
+.search-box {
+    outline: none;
+    width: 300px;
+    height: 40px;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+button {
+    /* background-color: rgb(0, 0, 0, .6); */
+    height: 30px;
+    width: 100px;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 20px;
+    margin: 10px;
+    background-color: #9ADBBA;
+}
+
+.fa-solid.fa-cart-shopping {
+    color: #A30B2E;
+    font-size: 30px;
+}
+
+.card {
+    width: 300px;
+    height: min-content;
+    padding: 25px;
+    margin: 150px 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.card .card-img {
+    width: 100%;
+    text-align: center;
+}
+
+.card .card-img img {
+    height: 200px;
+    margin: -150px 0 15px 0;
+    filter: drop-shadow (0 8px 8px #cdd5e2);
+    transition: 0.3s;
+}
+
+.card:hover .card-img img {
+    height: 240px;
+}
+
+.card .card-title h3 {
+    color: #1b2430;
+    font-size: 28px;
+    letter-spacing: -0.5px;
+}
+
+.card .card-title p {
+    color:#b3bac3;
+    font-size: 18px;
+    margin-top: -4px;
+    letter-spacing: -0.5px;
+}
+
+.card .card-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.card .card-details span {
+    color: #b3bac3;
+    font-size: 16px;
+}
+
+.card .card-details p {
+    color: #1b2430;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: -2px;
+}
+
+.card button {
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    background: #1b2430;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.list-page {
+    color: #8A2232;
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+.list-page ul {
+    list-style: none;
+    display:flex
+}
+
+.list-page ul li {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: 1px solid black;
+    text-align: center;
+    margin: 0px 20px;
+    
+}
+
+.active-page {
+    color: #8A2232;
+    font-weight: bold;
+    background-color: #DBD3BF;
+}
+
+.item-page {
+    cursor: pointer;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #989692;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    margin-bottom: 560px;
+  }
+
+  #snackbar-1 {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #989692;
+    color: #cb2020;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 2;
+    left: 50%;
+    bottom: 30px;
+    font-size: 20px;
+    margin-bottom: 560px;
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+  #snackbar-1.show1 {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }

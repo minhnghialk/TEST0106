@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="/style/register.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <h1>Register</h1>
+        <form action="" class="login-form">
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter email..."
+            id="email"
+          />
+          <br />
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter password..."
+            id="password"
+          />
+          <br />
+          <input
+            type="password"
+            name="password"
+            placeholder="Confirm password..."
+            id="confirmPassword"
+          />
+          <br />
+          <button class="btn" onclick="register(event)">Register</button>
+          <br />
+
+          <span
+            >Already have an account?
+            <a href="/html/login.html">Login.</a></span
+          >
+        </form>
+
+        <!-- <div id="snackbar">Message Validate</div> -->
+
+        <div id="snackbar"></div>
+      </div>
+    </div>
+
+    <script src="/js/register.js"></script>
+  </body>
+</html>
